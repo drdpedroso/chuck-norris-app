@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "semi": [2, "never"],
+    "import/extensions": ["always"],
+    "import/no-unresolved": ["always"],
+    "react/jsx-filename-extension": ["never"],
+    "import/prefer-default-export": [1, "always"],
+    "react/no-unused-prop-types": [1, "always"],
+    "max-len": ["error", { "code": 135 }]
+  },
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "plugins": ["jest"]
+}
