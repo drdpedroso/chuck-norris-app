@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Jokes should render correctly 1`] = `
-<div>
-  Joke
+<div
+  className="sc-bdVaJa kZAgjJ"
+>
+  <div
+    className="sc-bwzfXH dhWCcq"
+  />
+  <div
+    className="sc-bwzfXH dhWCcq"
+  />
 </div>
 `;

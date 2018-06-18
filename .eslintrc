@@ -3,6 +3,7 @@
   "rules": {
     "semi": [2, "never"],
     "import/extensions": ["always"],
+    "react/no-did-mount-set-state": ["always"],
     "import/no-unresolved": ["always"],
     "react/jsx-filename-extension": ["never"],
     "import/prefer-default-export": [1, "always"],

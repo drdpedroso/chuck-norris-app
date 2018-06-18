@@ -3,12 +3,12 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 module.exports = {
   devtool: 'eval-source-map',
   output: {
-    publicPath: '/'
+    publicPath: '/',
   },
   devServer: {
     compress: true,
     port: 9000,
-    historyApiFallback: true
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -16,24 +16,24 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
             loader: 'html-loader',
-            options: {minimize: true}
-          }
-        ]
-      }
-    ]
+            options: { minimize: true },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html'
-    })
-  ]
+      filename: './index.html',
+    }),
+  ],
 }

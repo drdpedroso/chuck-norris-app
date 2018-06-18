@@ -5,3 +5,4 @@ export const getNRandomJokes = async (numberOfJokes = 1) => {
   const response = await fetch(urlToFetch)
   return response.json()
 }
+
