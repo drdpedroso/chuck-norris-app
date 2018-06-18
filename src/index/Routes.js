@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Jokes from '@/pages/Jokes'
+import Jokes from 'pages/Jokes'
 
 const Routes = () => (
   <div>

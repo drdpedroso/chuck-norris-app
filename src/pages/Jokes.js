@@ -1,5 +1,5 @@
 import React from 'react'
-import { getNRandomJokes } from '../services/api/jokesApi'
+import { getNRandomJokes } from 'services/api/jokesApi'
 
 class Jokes extends React.Component {
   constructor() {

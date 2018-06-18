@@ -13,7 +13,10 @@
     "transform-do-expressions",
     ["module-resolver", {
       "alias": {
-        "@": "./src"
+        "components": "./src/components",
+        "pages": "./src/pages",
+        "index": "./src/index",
+        "services": "./src/services"
       }
     }]
   ]
