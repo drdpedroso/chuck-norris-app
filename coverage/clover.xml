@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1529270296371" clover="3.2.0">
-  <project timestamp="1529270296371" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="2" files="2" classes="2">
-      <package name="index">
+<coverage generated="1529282665812" clover="3.2.0">
+  <project timestamp="1529282665812" name="All files">
+    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1">
+      <file name="App.js" path="/Users/eduardopedroso/chuck-norris-app/src/index/App.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="App.js" path="/Users/eduardopedroso/chuck-norris-app/src/index/App.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="pages.Inventory.Inventory">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="index.js" path="/Users/eduardopedroso/chuck-norris-app/src/pages/Inventory/Inventory/index.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-        </file>
-      </package>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
     </metrics>
   </project>
 </coverage>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import App from '@/index/App'
+import Jokes from '@/pages/Jokes'
 
 const Routes = () => (
   <div>
-    <Route exac path="/" component={App} />
+    <Route exac path="/" component={Jokes} />
   </div>
 )
 

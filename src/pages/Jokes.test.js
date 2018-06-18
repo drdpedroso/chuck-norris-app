@@ -1,10 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Inventory from './index'
+import { Joke } from '@/services/tests/factories'
+import Jokes from './Jokes'
 
-describe('Inventory ', () => {
+describe('Jokes', () => {
   it('should render correctly', () => {
-    const component = renderer.create(<Inventory />)
+    const component = renderer.create(<Jokes />)
     expect(component).toMatchSnapshot()
   })
 })
