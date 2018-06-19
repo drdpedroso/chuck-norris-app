@@ -12,11 +12,11 @@ export const mapArrayToHashMap = (arr) => {
   return obj
 }
 
-export const getRandomIntegerInRange = (min = 0, max = 9) => Math.floor(Math.random() * (max - min + 1)) + min
-
-export const getRandomJoke = (jokes) => {
-  const randomKey = getRandomIntegerInRange()
-  const keys = Object.keys(jokes)
-  const item = keys[randomKey]
-  return jokes[item]
-}
+// export const getRandomIntegerInRange = (min = 0, max = 9) => Math.floor(Math.random() * (max - min + 1)) + min
+//
+// export const getRandomJoke = (jokes) => {
+//   const randomKey = getRandomIntegerInRange()
+//   const keys = Object.keys(jokes)
+//   const item = keys[randomKey]
+//   return jokes[item]
+// }
