@@ -12,6 +12,8 @@ export const mapArrayToHashMap = (arr) => {
   return obj
 }
 
+export const getAlphabetPositionOfALetter = (letter) => 'abcdefghijklmnopqrstuvwxyz'.indexOf(letter) + 1
+
 // export const getRandomIntegerInRange = (min = 0, max = 9) => Math.floor(Math.random() * (max - min + 1)) + min
 //
 // export const getRandomJoke = (jokes) => {

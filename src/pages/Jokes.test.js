@@ -46,10 +46,10 @@ describe('Jokes', () => {
         78: { id: 78, joke: 'The grass is always greener on the other side, unl…e grass is most likely soaked in blood and tears.', favorite: true },
       },
     }
-    const { removeIndexFromJokes } = Jokes
-    expect(JSON.stringify(removeIndexFromJokes({ favoriteJokes }, id))).toEqual(JSON.stringify(result))
+    const { removeJokeFromFavorites } = Jokes
+    expect(JSON.stringify(removeJokeFromFavorites({ favoriteJokes }, id))).toEqual(JSON.stringify(result))
   })
-  it('should sync jokes based on the list that the request was sended', () => {
+  it('should change joke favorite flag based on specific list', () => {
     const id = 78
     const currentState = {
       favoriteJokes: {
@@ -122,8 +122,8 @@ describe('Jokes', () => {
         },
       },
     }
-    const { syncJokesBasedOnList } = Jokes
-    expect(JSON.stringify(syncJokesBasedOnList(currentState, id, 'jokes'))).toEqual(JSON.stringify(res))
+    const { changeFavoriteFlagBasedOnList } = Jokes
+    expect(JSON.stringify(changeFavoriteFlagBasedOnList(currentState, id, 'jokes'))).toEqual(JSON.stringify(res))
   })
   it('should refresh data when clicking "Refresh" button', async () => {
     const component = shallow(<Jokes />)

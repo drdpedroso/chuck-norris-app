@@ -9,6 +9,6 @@ export const Column = styled.div`
 
 export const Button = styled.button`
   border-radius: 20px;
-  width: 55px;
+  width: 75px;
   background-color: ${props => props.backgroundColor}
 `

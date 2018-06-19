@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginModal should render correctly 1`] = `
+<div
+  className="sc-bwzfXH ikDjqk"
+>
+  <div
+    className="sc-bdVaJa gwBqPQ"
+  >
+    Login
+  </div>
+  <form>
+    <div>
+      <input
+        onChange={[Function]}
+        placeholder="User"
+        type="text"
+      />
+    </div>
+    <div>
+      <input
+        onChange={[Function]}
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <button
+      onClick={[Function]}
+    >
+      SUBMIT
+    </button>
+  </form>
+</div>
+`;

@@ -5,16 +5,46 @@ exports[`Jokes should render correctly 1`] = `
   className="sc-bdVaJa kZAgjJ"
 >
   <div
+    className="sc-ifAKCX fBTipX"
+  >
+    <div
+      className="sc-bxivhb zMMJx"
+    >
+      Login
+    </div>
+    <form>
+      <div>
+        <input
+          onChange={[Function]}
+          placeholder="User"
+          type="text"
+        />
+      </div>
+      <div>
+        <input
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        SUBMIT
+      </button>
+    </form>
+  </div>
+  <div
     className="sc-bwzfXH dhWCcq"
   >
     <button
-      className="sc-htpNat fdgbvj"
+      className="sc-htpNat hegkwq"
       onClick={[Function]}
     >
       Refresh
     </button>
     <button
-      className="sc-htpNat bBWpbB"
+      className="sc-htpNat eRLTRK"
       onClick={[Function]}
     >
       Add every 5sec

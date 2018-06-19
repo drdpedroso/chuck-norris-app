@@ -6,6 +6,7 @@ import first from 'lodash/first'
 // import { getIntersectionBetweenObjArrays } from 'services/utils/utils'
 import JokesList from './jokes/JokesList'
 import { Button, Column, JokesWrapper } from './jokes/style'
+import LoginModal from '../components/LoginModal'
 
 class Jokes extends React.Component {
   static getFavoriteJokes() {
@@ -17,16 +18,16 @@ class Jokes extends React.Component {
     return ({ favoriteJokes: favoriteJokesFormatted })
   }
 
-  static syncJokesBasedOnList(currentState, id, list) {
-    const selectedJoke = currentState[list][id]
+  static changeFavoriteFlagBasedOnList(currentState, jokeId, list) {
+    const selectedJoke = currentState[list][jokeId]
     const newJoke = Object.assign(selectedJoke, { favorite: !selectedJoke.favorite })
-    const jokes = Object.assign(currentState[list], { [id]: newJoke })
+    const jokes = Object.assign(currentState[list], { [jokeId]: newJoke })
     return { [list]: jokes }
   }
 
-  static removeIndexFromJokes({ favoriteJokes }, id) {
+  static removeJokeFromFavorites({ favoriteJokes }, jokeId) {
     const jokes = Object.assign({}, favoriteJokes)
-    delete jokes[id]
+    delete jokes[jokeId]
     return { favoriteJokes: jokes }
   }
 
@@ -37,7 +38,7 @@ class Jokes extends React.Component {
       favoriteJokes: {},
       isCounterInitialized: false,
     }
-    this.intervalId = 0
+    this.intervalId = 0 // Necessary to store setInterval ID to clear interval when needed
     this.addJokeToFavorites = this.addJokeToFavorites.bind(this)
     this.changeJokeStatus = this.changeJokeStatus.bind(this)
     this.updateAllItems = this.updateAllItems.bind(this)
@@ -61,16 +62,16 @@ class Jokes extends React.Component {
 
   removeJokeFromFavorites({ id }) {
     this.setState(
-      currentState => Jokes.removeIndexFromJokes(currentState, id),
+      currentState => Jokes.removeJokeFromFavorites(currentState, id),
       () => setItemsInLocalStorage('jokes', this.state.favoriteJokes),
     )
   }
 
-  changeJokeStatus(joke, shouldAdd, list) {
+  changeJokeStatus(joke, shouldAddToFavorite, list) {
     const { id } = joke
     this.setState(
-      currentState => Jokes.syncJokesBasedOnList(currentState, id, list),
-      () => (shouldAdd ? this.addJokeToFavorites(joke) : this.removeJokeFromFavorites(joke)),
+      currentState => Jokes.changeFavoriteFlagBasedOnList(currentState, id, list),
+      () => (shouldAddToFavorite ? this.addJokeToFavorites(joke) : this.removeJokeFromFavorites(joke)),
     )
   }
 
@@ -95,7 +96,7 @@ class Jokes extends React.Component {
       const { value } = await getNRandomJokes(1)
       const randomJoke = first(value)
       this.addJokeToFavorites(randomJoke)
-    }, 2000))
+    }, 5000))
     this.setState(currentState => ({ isCounterInitialized: !currentState.isCounterInitialized }), () => {
       if (this.state.isCounterInitialized) {
         if (Object.keys(this.state.favoriteJokes).length >= 10) this.stopIntervalJokes(this.intervalId)
@@ -113,6 +114,7 @@ class Jokes extends React.Component {
     } = this.state
     return (
       <JokesWrapper>
+        <LoginModal />
         <Column>
           <Button onClick={this.updateAllItems}>Refresh</Button>
           <Button
