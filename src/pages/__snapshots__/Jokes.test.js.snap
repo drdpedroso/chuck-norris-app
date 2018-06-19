@@ -6,7 +6,20 @@ exports[`Jokes should render correctly 1`] = `
 >
   <div
     className="sc-bwzfXH dhWCcq"
-  />
+  >
+    <button
+      className="sc-htpNat fdgbvj"
+      onClick={[Function]}
+    >
+      Refresh
+    </button>
+    <button
+      className="sc-htpNat bBWpbB"
+      onClick={[Function]}
+    >
+      Add every 5sec
+    </button>
+  </div>
   <div
     className="sc-bwzfXH dhWCcq"
   />

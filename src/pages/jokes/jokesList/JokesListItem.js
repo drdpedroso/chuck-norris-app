@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const JokeListItem = ({ id, joke, onChange, list, favorite = false }) => (
+const JokeListItem = ({
+  id, joke, onChange, list, favorite = false,
+}) => (
   <div>
-    <input type="checkbox" checked={favorite} onChange={({target}) => onChange({id, joke}, target.checked, list)}/>
+    <input type="checkbox" checked={favorite} onChange={({ target }) => onChange({ id, joke }, target.checked, list)} />
     {joke}
   </div>
 )

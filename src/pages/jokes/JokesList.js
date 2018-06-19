@@ -3,12 +3,10 @@ import PropTypes from 'prop-types'
 import JokeListItem from './jokesList/JokesListItem'
 
 export const JokesList = ({ jokes = [], onChange = () => {}, list }) => {
-  const renderListItem = items => {
-    return Object.keys(items).map(key => {
-      const {id, favorite, joke} = items[key]
-      return (<JokeListItem key={id} id={id} favorite={favorite} joke={joke} onChange={onChange} list={list}/>)
-    })
-  }
+  const renderListItem = items => Object.keys(items).map((key) => {
+    const { id, favorite, joke } = items[key]
+    return (<JokeListItem key={id} id={id} favorite={favorite} joke={joke} onChange={onChange} list={list} />)
+  })
 
   return (
     <React.Fragment>
