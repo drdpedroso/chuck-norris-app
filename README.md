@@ -1,9 +1,7 @@
 ## Chuck Norris Joke Application
 
 ### About
-The goal of this project is to fetch Chuck Norris' Jokes and display then in a list.
-You can favorite those jokes and place then into another list (called favorite jokes).
-You're also able to favorite/unfavorite those jokes.
+The goal of this project is to fetch Chuck Norris' Jokes and display them in a list. You can favorite those jokes and place them into another list (called favorite jokes). You're also able to favorite/unfavorite those jokes.
 
 This project uses `React`, `ES6` and `Lodash` as "core" libraries. For testing, it uses `Jest`,
 `rosie` and `enzyme`.
