@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { validatePassword } from 'services/utils/utils'
+import { setCookie } from 'services/storage/storage'
 
 const Title = styled.div`
   font-size: 22px;
@@ -17,30 +19,40 @@ const ModalWrapper = styled.div`
   border-width: medium;
 `
 
-class LoginModal extends React.PureComponent{
-  onChange({value}, key) {
+class LoginModal extends React.PureComponent {
+  constructor() {
+    super()
+
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+  onChange({ value }, key) {
     this.setState({
-      [key]: value
-    }, () => console.log(this.state))
+      [key]: value,
+    })
   }
 
-  onSubmit(e){
+  onSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
+    if (validatePassword(this.state.password)) {
+      setCookie('logged', true)
+      this.props.onSubmit()
+    } else {
+      alert('Password invalid')
+    }
   }
 
   render() {
-    return(
+    return (
       <ModalWrapper>
         <Title>Login</Title>
         <form>
           <div>
-            <input type="text" onChange={({target}) => this.onChange(target, 'user')} placeholder="User"/>
+            <input type="text" onChange={({ target }) => this.onChange(target, 'user')} placeholder="User" />
           </div>
           <div>
-            <input type="password" onChange={({target}) => this.onChange(target, 'password')} placeholder="Password"/>
+            <input type="password" onChange={({ target }) => this.onChange(target, 'password')} placeholder="Password" />
           </div>
-          <button onClick={e => this.onSubmit(e)}>SUBMIT</button>
+          <button onClick={this.onSubmit}>SUBMIT</button>
         </form>
       </ModalWrapper>
     )

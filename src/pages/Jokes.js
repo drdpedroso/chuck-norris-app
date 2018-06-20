@@ -1,6 +1,6 @@
 import React from 'react'
 import { getNRandomJokes } from 'services/api/jokesApi'
-import { getItemsFromLocalStorage, setItemsInLocalStorage } from 'services/storage/localStorage'
+import { getItemsFromLocalStorage, setItemsInLocalStorage, getCookie } from 'services/storage/storage'
 import { mapArrayToHashMap } from 'services/utils/utils'
 import first from 'lodash/first'
 // import { getIntersectionBetweenObjArrays } from 'services/utils/utils'
@@ -37,12 +37,14 @@ class Jokes extends React.Component {
       jokes: {},
       favoriteJokes: {},
       isCounterInitialized: false,
+      isLogged: getCookie('logged') || false
     }
     this.intervalId = 0 // Necessary to store setInterval ID to clear interval when needed
     this.addJokeToFavorites = this.addJokeToFavorites.bind(this)
     this.changeJokeStatus = this.changeJokeStatus.bind(this)
     this.updateAllItems = this.updateAllItems.bind(this)
     this.addNewFavoriteJokesEveryNSeconds = this.addNewFavoriteJokesEveryNSeconds.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   addJokeToFavorites(joke) {
@@ -51,14 +53,6 @@ class Jokes extends React.Component {
       () => setItemsInLocalStorage('jokes', this.state.favoriteJokes),
     )
   }
-  //
-  // checkForObjectsIntersection(jokes, favoriteJokes) {
-  //   Object.keys(jokes).forEach((joke) => {
-  //     if (favoriteJokes[joke]) {
-  //       console.log(joke)
-  //     }
-  //   })
-  // }
 
   removeJokeFromFavorites({ id }) {
     this.setState(
@@ -106,15 +100,22 @@ class Jokes extends React.Component {
     })
   }
 
+  onSubmit() {
+    this.setState({
+      isLogged: true
+    })
+  }
+
   render() {
     const {
       jokes,
       favoriteJokes,
       isCounterInitialized,
+      isLogged
     } = this.state
     return (
       <JokesWrapper>
-        <LoginModal />
+        {!isLogged && <LoginModal onSubmit={this.onSubmit}/>}
         <Column>
           <Button onClick={this.updateAllItems}>Refresh</Button>
           <Button

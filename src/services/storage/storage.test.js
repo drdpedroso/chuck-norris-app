@@ -1,5 +1,5 @@
 import { LocalStorageMock } from '../tests/mocks'
-import { getItemsFromLocalStorage, setItemsInLocalStorage } from './localStorage'
+import { getItemsFromLocalStorage, setItemsInLocalStorage } from './storage'
 
 global.localStorage = new LocalStorageMock()
 

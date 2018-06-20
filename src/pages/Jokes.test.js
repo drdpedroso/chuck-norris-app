@@ -22,28 +22,25 @@ describe('Jokes', () => {
   })
   it('should format correctly based on received joke', () => {
     const favoriteJokes = {
-      206: { id: 206, joke: 'Chuck Norris destroyed the periodic table, because…k Norris only recognizes the element of surprise.', favorite: true },
-      223: { id: 223, joke: "Chuck Norris smells what the Rock is cooking... because the Rock is Chuck Norris' personal chef.", favorite: true },
+      206: Joke.build({id: 206, favorite: true}),
+      223: Joke.build({id: 223, favorite: true}),
     }
     const res = {
-      favoriteJokes: {
-        206: { id: 206, joke: 'Chuck Norris destroyed the periodic table, because…k Norris only recognizes the element of surprise.', favorite: true },
-        223: { id: 223, joke: "Chuck Norris smells what the Rock is cooking... because the Rock is Chuck Norris' personal chef.", favorite: true },
-      },
+      favoriteJokes: favoriteJokes,
     }
-    const joke = { id: 223, joke: "Chuck Norris smells what the Rock is cooking... because the Rock is Chuck Norris' personal chef." }
+    const joke = Joke.build({id: 223})
     const { changeFavoriteJokes } = Jokes
     expect(JSON.stringify(changeFavoriteJokes({ favoriteJokes }, joke))).toEqual(JSON.stringify(res))
   })
   it('should remove object key based on id', () => {
-    const favoriteJokes = {
-      78: { id: 78, joke: 'The grass is always greener on the other side, unl…e grass is most likely soaked in blood and tears.', favorite: true },
-      206: { id: 206, joke: 'Chuck Norris destroyed the periodic table, because…k Norris only recognizes the element of surprise.', favorite: false },
-    }
     const id = 206
+    const favoriteJokes = {
+      78: Joke.build({id: 78, favorite: true}),
+      206: Joke.build({id: 206, favorite: false}),
+    }
     const result = {
       favoriteJokes: {
-        78: { id: 78, joke: 'The grass is always greener on the other side, unl…e grass is most likely soaked in blood and tears.', favorite: true },
+        78: Joke.build({id: 78, favorite: true}),
       },
     }
     const { removeJokeFromFavorites } = Jokes

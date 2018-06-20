@@ -3,35 +3,41 @@ import renderer from 'react-test-renderer'
 import LoginModal from './index'
 import { shallow } from 'enzyme'
 
-const validatePassword = (password) => {
-  password.forEach(char => console.log(char))
-}
+global.alert = jest.fn()
 
 describe('LoginModal', () => {
   it('should render correctly', () => {
     const component = renderer.create(<LoginModal />)
     expect(component).toMatchSnapshot()
   })
-  xit('should return invalid if [i, O, l] are present', () => {
-    // validatePassword()
+  it('should change state value based on key/val parameters', () => {
+    const component = shallow(<LoginModal />)
+    component.instance().onChange({value: 10}, 'test')
+    expect(component.state().test).toEqual(10)
   })
-  xit('should return valid if one increasing straight of at least three letters are present', () => {
-    // e.g abc, cde, fgh
-    // validatePassword()
+  it('should trigger submit prop event if password is valid', () => {
+    const password = 'abcpassword'
+    const e = {
+      preventDefault: jest.fn()
+    }
+    const onSubmit = jest.fn()
+    const component = shallow(<LoginModal onSubmit={onSubmit}/>)
+    component.setState({ password })
+    component.instance().onSubmit(e)
+    expect(e.preventDefault).toHaveBeenCalled()
+    expect(onSubmit).toHaveBeenCalled()
   })
-  xit('should return valid if two non-overlapping pairs of letters are present', () => {
-    // e.g aa, bb, cc
-  })
-  xit('should return invalid if password are bigger than 32 characters', () => {
-
-  })
-  xit('should return invalid if any numbers are present', () => {
-
-  })
-  xit('should return invalid if any uppercase letters are present', () => {
-
-  })
-  xit('should return invalid if any special character are present', () => {
-
+  it('should not trigger submit prop event if password is invalid', () => {
+    const password = 'ab12password'
+    const e = {
+      preventDefault: jest.fn()
+    }
+    const onSubmit = jest.fn()
+    const component = shallow(<LoginModal onSubmit={onSubmit}/>)
+    component.setState({ password })
+    component.instance().onSubmit(e)
+    expect(e.preventDefault).toHaveBeenCalled()
+    expect(global.alert).toHaveBeenCalled()
+    expect(onSubmit).not.toHaveBeenCalled()
   })
 })

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JokesList should render correctly 1`] = `
+Array [
+  <div>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+  <div>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+  <div>
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+]
+`;
+
+exports[`JokesList should render correctly 2`] = `
+Array [
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+  <div>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Chuck Norris crossed the road. No one has ever dared question his motives.
+  </div>,
+]
+`;
