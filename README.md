@@ -3,12 +3,12 @@
 ### About
 The goal of this project is to fetch Chuck Norris' Jokes and display them in a list. You can favorite those jokes and place them into another list (called favorite jokes). You're also able to favorite/unfavorite those jokes.
 
-This project uses `React`, `ES6` and `Lodash` as "core" libraries. For testing, it uses `Jest`,
+This project uses `React`, `ES6`, `lodash` and `Styled Components` as "core" libraries. For testing, it uses `Jest`,
 `rosie` and `enzyme`.
 
 #### Pattern
 The project structure follows something similar to `Fractal` project structure (differing only in the naming convention).
-The code style follows the `AirBnB` JavaScript pattern with some smaller changes that I considered more readable (check `.eslintrc`).
+The code style follows the `AirbnB` JavaScript pattern with some smaller changes that I considered more readable (check `.eslintrc`).
  
 
 ### How to run it

@@ -7,7 +7,7 @@ const JokeListItem = ({
   <div>
     <label className="container" htmlFor={id}>
       <input type="checkbox" id={id} checked={favorite} onChange={({ target }) => onChange({ id, joke }, target.checked, list)} />
-      {favorite ? <i className="fa fa-star" /> : <i className="far fa-star" />}
+      <i className={`${favorite ? 'fa' : 'far'} fa-star`}/>
     </label>
     {joke}
   </div>

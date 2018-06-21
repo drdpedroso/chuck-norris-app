@@ -74,7 +74,8 @@ class Jokes extends React.Component {
     const { id } = joke
     this.setState(
       currentState => Jokes.changeFavoriteFlagBasedOnList(currentState, id, list),
-      () => (shouldAddToFavorite ? this.addJokeToFavorites(joke) : this.removeJokeFromFavorites(joke)),
+      () => (shouldAddToFavorite && Object.keys(this.state.favoriteJokes).length < 10 ?
+        this.addJokeToFavorites(joke) : this.removeJokeFromFavorites(joke)),
     )
   }
 

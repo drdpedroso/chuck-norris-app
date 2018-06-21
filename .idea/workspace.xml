@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b798cf0c-2490-4485-89bd-8a42c2e6046b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/clover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/clover.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/coverage-final.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/coverage-final.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/index.html" afterDir="false" />
@@ -15,14 +16,8 @@
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/pages/jokes/jokesList/JokesListItem.js.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/pages/jokes/jokesList/JokesListItem.js.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov-report/src/pages/jokes/jokesList/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov-report/src/pages/jokes/jokesList/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverage/lcov.info" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginModal/__snapshots__/index.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginModal/__snapshots__/index.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginModal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginModal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginModal/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginModal/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/__snapshots__/Jokes.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/__snapshots__/Jokes.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/jokes/__snapshots__/JokesList.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/jokes/__snapshots__/JokesList.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Jokes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Jokes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Jokes.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Jokes.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/jokes/jokesList/JokesListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/jokes/jokesList/JokesListItem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Jokes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Jokes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/Jokes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="250">
+              <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -52,22 +47,10 @@
       <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/utils/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JokesListItem.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/jokes/jokesList/JokesListItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,18 +107,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jokes.test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Jokes.test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -166,11 +137,12 @@
       <find>xit</find>
       <find>i</find>
       <find>addJokeToFavorites</find>
-      <find>lookForStraightLetters</find>
       <find>++</find>
       <find>JokesList</find>
-      <find>addJoke</find>
       <find>font</find>
+      <find>getIntersectionBetweenObjArrays</find>
+      <find>lookForStraightLetters</find>
+      <find>addJoke</find>
     </findStrings>
     <replaceStrings>
       <replace>updateAllItems</replace>
@@ -214,11 +186,8 @@
         <option value="$PROJECT_DIR$/src/pages/jokes/JokesList.test.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_7.es6" />
         <option value="$PROJECT_DIR$/src/index.test.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/LoginModal/index.test.js" />
-        <option value="$PROJECT_DIR$/src/pages/Jokes.js" />
         <option value="$PROJECT_DIR$/src/services/utils/utils.test.js" />
-        <option value="$PROJECT_DIR$/src/pages/Jokes.test.js" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/src/services/utils/utils.js" />
         <option value="$PROJECT_DIR$/src/components/LoginModal/style.js" />
@@ -227,6 +196,9 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/pages/jokes/jokesList/JokesListItem.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/pages/Jokes.test.js" />
+        <option value="$PROJECT_DIR$/src/pages/Jokes.js" />
       </list>
     </option>
   </component>
@@ -339,7 +311,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.utils">
+  <component name="RunManager" selected="Jest.Jokes.should change joke favorite flag based on specific list">
+    <configuration name="Jokes.should change joke favorite flag based on specific list" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/pages/Jokes.test.js" />
+      <test-names>
+        <test-name value="Jokes" />
+        <test-name value="should change joke favorite flag based on specific list" />
+      </test-names>
+    </configuration>
     <configuration name="LoginModal" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -374,18 +358,6 @@
         <test-name value="should return false for invalid password" />
       </test-names>
     </configuration>
-    <configuration name="utils.should return true for valid password" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/services/utils/utils.test.js" />
-      <test-names>
-        <test-name value="utils" />
-        <test-name value="should return true for valid password" />
-      </test-names>
-    </configuration>
     <configuration name="utils.should return valid if two non-overlapping pairs of letters are present" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -400,18 +372,18 @@
     </configuration>
     <list>
       <item itemvalue="Jest.utils" />
-      <item itemvalue="Jest.utils.should return true for valid password" />
       <item itemvalue="Jest.utils.should return valid if two non-overlapping pairs of letters are present" />
       <item itemvalue="Jest.LoginModal" />
       <item itemvalue="Jest.utils.should return false for invalid password" />
+      <item itemvalue="Jest.Jokes.should change joke favorite flag based on specific list" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Jokes.should change joke favorite flag based on specific list" />
         <item itemvalue="Jest.utils" />
         <item itemvalue="Jest.utils.should return false for invalid password" />
         <item itemvalue="Jest.LoginModal" />
         <item itemvalue="Jest.utils.should return valid if two non-overlapping pairs of letters are present" />
-        <item itemvalue="Jest.utils.should return true for valid password" />
       </list>
     </recent_temporary>
   </component>
@@ -429,44 +401,44 @@
       <workItem from="1529279279925" duration="4161000" />
       <workItem from="1529285263804" duration="31772000" />
       <workItem from="1529426062953" duration="6862000" />
-      <workItem from="1529449288087" duration="30066000" />
+      <workItem from="1529449288087" duration="31282000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 46m 38s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 47m 49s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 48m 50s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 49m 12s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 49m 19s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils_should_return_false_for_invalid_password - 2018.06.20 at 20h 50m 05s.xml">
-      <configuration name="utils.should return false for invalid password" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils - 2018.06.20 at 20h 50m 25s.xml">
-      <configuration name="utils" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils - 2018.06.20 at 20h 58m 46s.xml">
-      <configuration name="utils" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
-    <history-entry file="utils - 2018.06.20 at 20h 59m 31s.xml">
-      <configuration name="utils" configurationId="JavaScriptTestRunnerJest" />
-    </history-entry>
     <history-entry file="utils - 2018.06.20 at 20h 59m 50s.xml">
       <configuration name="utils" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 39m 47s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 40m 03s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 42m 14s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 43m 09s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 44m 00s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 44m 46s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 44m 59s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 46m 49s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="Jokes_should_change_joke_favorite_flag_based_on_specific_list - 2018.06.21 at 07h 47m 01s.xml">
+      <configuration name="Jokes.should change joke favorite flag based on specific list" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76547000" />
+    <option name="totallyTimeSpent" value="77763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -475,11 +447,11 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3197556" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3197556" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Quokka" order="0" weight="0.32806325" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -849,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LoginModal/index.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -869,47 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/utils/utils.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Jokes.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Jokes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -954,10 +879,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/jokes/jokesList/JokesListItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Jokes.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/utils/utils.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Jokes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

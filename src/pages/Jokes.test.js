@@ -1,8 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Joke } from 'services/tests/factories'
+import { mapArrayToHashMap } from 'services/utils/utils'
 import { shallow } from 'enzyme'
 import Jokes from './Jokes'
+
+const mountJokesByQuantity = (quantity = 1, favorite = false) => Array(quantity).fill(0).map(() => Joke.build({favorite}))
 
 jest.mock('../services/api/jokesApi', () => (
   {
@@ -15,6 +18,8 @@ jest.mock('../services/api/jokesApi', () => (
     })),
   }
 ))
+
+
 describe('Jokes', () => {
   it('should render correctly', () => {
     const component = renderer.create(<Jokes />)
@@ -47,77 +52,16 @@ describe('Jokes', () => {
     expect(JSON.stringify(removeJokeFromFavorites({ favoriteJokes }, id))).toEqual(JSON.stringify(result))
   })
   it('should change joke favorite flag based on specific list', () => {
-    const id = 78
+    const id = 2
+    const factoryMadeJokes = mapArrayToHashMap(mountJokesByQuantity(10))
     const currentState = {
       favoriteJokes: {
-        206: { id: 206, joke: 'Chuck Norris destroyed the periodic table, because…k Norris only recognizes the element of surprise.', favorite: true },
+        2: Joke.build({id: 2, favorite: true})
       },
-      jokes: {
-        78: {
-          id: 78, joke: 'The grass is always greener on the other side, unl…e grass is most likely soaked in blood and tears.', favorite: false,
-        },
-        83: {
-          id: 83, joke: 'While urinating, Chuck Norris is easily capable of welding titanium.', favorite: false,
-        },
-        104: {
-          id: 104, joke: "If you Google search &quot;Chuck Norris getting hi…ll generate zero results. It just doesn't happen.", favorite: false,
-        },
-        169: {
-          id: 169, joke: 'Chuck Norris won super bowls VII and VIII singleha…tedly retiring to pursue a career in ass-kicking.', favorite: false,
-        },
-        265: {
-          id: 265, joke: "The phrase 'balls to the wall' was originally conc…ing any building smaller than an aircraft hangar.", favorite: false,
-        },
-        329: {
-          id: 329, joke: 'There are only two things that can cut diamonds: other diamonds, and Chuck Norris.', favorite: false,
-        },
-        344: {
-          id: 344, joke: 'Aliens DO indeed exist. They just know better than to visit a planet that Chuck Norris is on.', favorite: false,
-        },
-        370: {
-          id: 370, joke: "Godzilla is a Japanese rendition of Chuck Norris' first visit to Tokyo.", favorite: false,
-        },
-        402: {
-          id: 402, joke: 'There is no such thing as a lesbian, just a woman who has never met Chuck Norris.', favorite: false,
-        },
-        473: {
-          id: 473, joke: 'Chuck Norris can overflow your stack just by looking at it.', favorite: false,
-        },
-      },
+      jokes: factoryMadeJokes,
     }
     const res = {
-      jokes: {
-        78: {
-          id: 78, joke: 'The grass is always greener on the other side, unl…e grass is most likely soaked in blood and tears.', favorite: true,
-        },
-        83: {
-          id: 83, joke: 'While urinating, Chuck Norris is easily capable of welding titanium.', favorite: false,
-        },
-        104: {
-          id: 104, joke: "If you Google search &quot;Chuck Norris getting hi…ll generate zero results. It just doesn't happen.", favorite: false,
-        },
-        169: {
-          id: 169, joke: 'Chuck Norris won super bowls VII and VIII singleha…tedly retiring to pursue a career in ass-kicking.', favorite: false,
-        },
-        265: {
-          id: 265, joke: "The phrase 'balls to the wall' was originally conc…ing any building smaller than an aircraft hangar.", favorite: false,
-        },
-        329: {
-          id: 329, joke: 'There are only two things that can cut diamonds: other diamonds, and Chuck Norris.', favorite: false,
-        },
-        344: {
-          id: 344, joke: 'Aliens DO indeed exist. They just know better than to visit a planet that Chuck Norris is on.', favorite: false,
-        },
-        370: {
-          id: 370, joke: "Godzilla is a Japanese rendition of Chuck Norris' first visit to Tokyo.", favorite: false,
-        },
-        402: {
-          id: 402, joke: 'There is no such thing as a lesbian, just a woman who has never met Chuck Norris.', favorite: false,
-        },
-        473: {
-          id: 473, joke: 'Chuck Norris can overflow your stack just by looking at it.', favorite: false,
-        },
-      },
+      jokes: Object.assign(factoryMadeJokes, {2: Joke.build({id: 2, favorite: true})}),
     }
     const { changeFavoriteFlagBasedOnList } = Jokes
     expect(JSON.stringify(changeFavoriteFlagBasedOnList(currentState, id, 'jokes'))).toEqual(JSON.stringify(res))
