@@ -3,27 +3,54 @@
 exports[`JokesList should render correctly 1`] = `
 Array [
   <div>
-    <input
-      checked={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={1}
+    >
+      <input
+        checked={true}
+        id={1}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="fa fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
   <div>
-    <input
-      checked={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={2}
+    >
+      <input
+        checked={true}
+        id={2}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="fa fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
   <div>
-    <input
-      checked={true}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={3}
+    >
+      <input
+        checked={true}
+        id={3}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="fa fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
 ]
@@ -32,27 +59,54 @@ Array [
 exports[`JokesList should render correctly 2`] = `
 Array [
   <div>
-    <input
-      checked={false}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={4}
+    >
+      <input
+        checked={false}
+        id={4}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="far fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
   <div>
-    <input
-      checked={false}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={5}
+    >
+      <input
+        checked={false}
+        id={5}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="far fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
   <div>
-    <input
-      checked={false}
-      onChange={[Function]}
-      type="checkbox"
-    />
+    <label
+      className="container"
+      htmlFor={6}
+    >
+      <input
+        checked={false}
+        id={6}
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <i
+        className="far fa-star"
+      />
+    </label>
     Chuck Norris crossed the road. No one has ever dared question his motives.
   </div>,
 ]

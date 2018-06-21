@@ -5,32 +5,34 @@ exports[`Jokes should render correctly 1`] = `
   className="sc-bdVaJa kZAgjJ"
 >
   <div
-    className="sc-ifAKCX fBTipX"
+    className="sc-ifAKCX jSSRiN"
   >
     <div
-      className="sc-bxivhb zMMJx"
+      className="sc-bxivhb hmisdv"
     >
       Login
     </div>
     <form>
       <div>
         <input
-          className="sc-bZQynM dSgrvo"
+          className="sc-bZQynM emrcli"
           onChange={[Function]}
           placeholder="User"
+          required={true}
           type="text"
         />
       </div>
       <div>
         <input
-          className="sc-bZQynM dSgrvo"
+          className="sc-bZQynM emrcli"
           onChange={[Function]}
           placeholder="Password"
+          required={true}
           type="password"
         />
       </div>
       <button
-        className="sc-EHOje kSzTaY"
+        className="sc-EHOje ewTICj"
         onClick={[Function]}
       >
         SUBMIT

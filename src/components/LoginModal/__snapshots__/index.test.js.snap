@@ -2,32 +2,34 @@
 
 exports[`LoginModal should render correctly 1`] = `
 <div
-  className="sc-bwzfXH ikDjqk"
+  className="sc-bwzfXH dZnbse"
 >
   <div
-    className="sc-bdVaJa gwBqPQ"
+    className="sc-bdVaJa kktCLb"
   >
     Login
   </div>
   <form>
     <div>
       <input
-        className="sc-bxivhb eBNJKg"
+        className="sc-bxivhb fHTTQq"
         onChange={[Function]}
         placeholder="User"
+        required={true}
         type="text"
       />
     </div>
     <div>
       <input
-        className="sc-bxivhb eBNJKg"
+        className="sc-bxivhb fHTTQq"
         onChange={[Function]}
         placeholder="Password"
+        required={true}
         type="password"
       />
     </div>
     <button
-      className="sc-htpNat hHtpcc"
+      className="sc-htpNat hTUlbK"
       onClick={[Function]}
     >
       SUBMIT

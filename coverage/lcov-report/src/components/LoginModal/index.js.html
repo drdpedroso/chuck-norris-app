@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">88.24% </span>
+        <span class="strong">84.62% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>15/17</span>
+        <span class='fraction'>11/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>4/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">88.24% </span>
+        <span class="strong">84.62% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/17</span>
+        <span class='fraction'>11/13</span>
       </div>
     </div>
     <p class="quiet">
@@ -102,53 +102,10 @@
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -156,6 +113,7 @@
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -201,32 +159,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { validatePassword } from 'services/utils/utils'
 import { setCookie } from 'services/storage/storage'
-&nbsp;
-const Title = styled.div`
-  font-size: 22px;
-  text-align: center;
-  margin: auto;
-`
-&nbsp;
-const ModalWrapper = styled.div`
-  height: 450px;
-  width: 400px;
-  position: fixed;
-  left: 38%;
-  background-color: white;
-  border-style: solid;
-  border-width: medium;
-`
-&nbsp;
-const Button = styled.button`
-`
-&nbsp;
-const Input = styled.input`
-`
+import { Button, Input, ModalWrapper, Title } from './style'
 &nbsp;
 class LoginModal extends React.PureComponent {
   constructor() {
@@ -234,6 +170,7 @@ class LoginModal extends React.PureComponent {
 &nbsp;
     this.onSubmit = this.onSubmit.bind(this)
   }
+&nbsp;
   onChange({ value }, key) {
     this.setState({
       [key]: value,
@@ -246,7 +183,7 @@ class LoginModal extends React.PureComponent {
       setCookie('logged', true)
       this.props.onSubmit()
     } else {
-      alert('Password invalid')
+      alert('Password is invalid :(')
     }
   }
 &nbsp;
@@ -256,10 +193,10 @@ class LoginModal extends React.PureComponent {
         &lt;Title&gt;Login&lt;/Title&gt;
         &lt;form&gt;
           &lt;div&gt;
-            &lt;Input type="text" onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >this.onChange(target, 'user')}</span> placeholder="User" /&gt;
+            &lt;Input type="text" onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >this.onChange(target, 'user')}</span> placeholder="User" required /&gt;
           &lt;/div&gt;
           &lt;div&gt;
-            &lt;Input type="password" onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >this.onChange(target, 'password')}</span> placeholder="Password" /&gt;
+            &lt;Input type="password" onChange={<span class="fstat-no" title="function not covered" >({</span> target }) =&gt; <span class="cstat-no" title="statement not covered" >this.onChange(target, 'password')}</span> placeholder="Password" required /&gt;
           &lt;/div&gt;
           &lt;Button onClick={this.onSubmit}&gt;SUBMIT&lt;/Button&gt;
         &lt;/form&gt;
@@ -283,7 +220,7 @@ export default LoginModal
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jun 20 2018 21:06:16 GMT-0300 (-03)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jun 20 2018 22:18:23 GMT-0300 (-03)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

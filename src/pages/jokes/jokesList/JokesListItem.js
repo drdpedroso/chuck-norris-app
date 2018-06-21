@@ -5,25 +5,25 @@ const JokeListItem = ({
   id, joke, onChange, list, favorite = false,
 }) => (
   <div>
-    <input type="checkbox" checked={favorite} onChange={({ target }) => onChange({ id, joke }, target.checked, list)} />
+    <label className="container" htmlFor={id}>
+      <input type="checkbox" id={id} checked={favorite} onChange={({ target }) => onChange({ id, joke }, target.checked, list)} />
+      {favorite ? <i className="fa fa-star" /> : <i className="far fa-star" />}
+    </label>
     {joke}
   </div>
 )
 
 JokeListItem.propTypes = {
-  id: PropTypes.number,
-  joke: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  joke: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   list: PropTypes.string,
-  favorite: PropTypes.bool,
+  favorite: PropTypes.bool.isRequired,
 }
 
 JokeListItem.defaultProps = {
-  id: 0,
-  joke: 'Filler',
   onChange: () => {},
   list: 'favorites',
-  favorite: true,
 }
 
 export default JokeListItem
