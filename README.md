@@ -18,3 +18,10 @@ at `http://localhost:9000/`
 ### Tests
 Simply run `npm t`. I'm using factory-based tests with `rosie` to make it easier to write the tests.
 
+### Links
+- https://hackernoon.com/fractal-a-react-app-structure-for-infinite-scale-4dab943092af
+- https://lodash.com/
+- https://github.com/airbnb/javascript
+
+### Author
+Made by Eduardo Pedroso (@drdpedroso)
