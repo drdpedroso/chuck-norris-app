@@ -11,14 +11,19 @@ const JokeListItem = ({
 )
 
 JokeListItem.propTypes = {
-  joke: PropTypes.shape({
-    color: PropTypes.string.isRequired,
-    fontSize: PropTypes.number.isRequired,
-  }).isRequired,
+  id: PropTypes.number,
+  joke: PropTypes.string,
+  onChange: PropTypes.func,
+  list: PropTypes.string,
+  favorite: PropTypes.bool,
 }
 
 JokeListItem.defaultProps = {
-  jokes: [],
+  id: 0,
+  joke: 'Filler',
+  onChange: () => {},
+  list: 'favorites',
+  favorite: true,
 }
 
 export default JokeListItem

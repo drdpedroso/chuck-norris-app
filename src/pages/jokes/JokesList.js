@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import JokeListItem from './jokesList/JokesListItem'
 
-export const JokesList = ({ jokes = [], onChange = () => {}, list }) => {
+const JokesList = ({ jokes = [], onChange = () => {}, list }) => {
   const renderListItem = items => Object.keys(items).map((key) => {
     const { id, favorite, joke } = items[key]
     return (
@@ -28,19 +28,21 @@ export const JokesList = ({ jokes = [], onChange = () => {}, list }) => {
 
 
 JokesList.propTypes = {
-  jokes: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    joke: PropTypes.string,
-    categories: PropTypes.arrayOf(PropTypes.string),
-  })).isRequired,
+  jokes: PropTypes.shape({
+    id: PropTypes.shape({
+      id: PropTypes.number,
+      joke: PropTypes.string,
+      favorite: PropTypes.bool,
+      categories: PropTypes.array,
+    }),
+  }).isRequired,
+  onChange: PropTypes.func,
+  list: PropTypes.string,
 }
 
 JokesList.defaultProps = {
-  jokes: [{
-    id: 0,
-    joke: 'Just a filler joke',
-    categories: [],
-  }],
+  onChange: () => {},
+  list: 'favorites',
 }
 
 export default JokesList

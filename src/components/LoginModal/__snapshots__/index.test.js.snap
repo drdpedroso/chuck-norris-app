@@ -12,6 +12,7 @@ exports[`LoginModal should render correctly 1`] = `
   <form>
     <div>
       <input
+        className="sc-bxivhb eBNJKg"
         onChange={[Function]}
         placeholder="User"
         type="text"
@@ -19,12 +20,14 @@ exports[`LoginModal should render correctly 1`] = `
     </div>
     <div>
       <input
+        className="sc-bxivhb eBNJKg"
         onChange={[Function]}
         placeholder="Password"
         type="password"
       />
     </div>
     <button
+      className="sc-htpNat hHtpcc"
       onClick={[Function]}
     >
       SUBMIT

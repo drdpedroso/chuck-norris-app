@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Joke } from 'services/tests/factories'
-import Jokes from './Jokes'
 import { shallow } from 'enzyme'
+import Jokes from './Jokes'
 
 jest.mock('../services/api/jokesApi', () => (
   {
@@ -22,25 +22,25 @@ describe('Jokes', () => {
   })
   it('should format correctly based on received joke', () => {
     const favoriteJokes = {
-      206: Joke.build({id: 206, favorite: true}),
-      223: Joke.build({id: 223, favorite: true}),
+      206: Joke.build({ id: 206, favorite: true }),
+      223: Joke.build({ id: 223, favorite: true }),
     }
     const res = {
-      favoriteJokes: favoriteJokes,
+      favoriteJokes,
     }
-    const joke = Joke.build({id: 223})
+    const joke = Joke.build({ id: 223 })
     const { changeFavoriteJokes } = Jokes
     expect(JSON.stringify(changeFavoriteJokes({ favoriteJokes }, joke))).toEqual(JSON.stringify(res))
   })
   it('should remove object key based on id', () => {
     const id = 206
     const favoriteJokes = {
-      78: Joke.build({id: 78, favorite: true}),
-      206: Joke.build({id: 206, favorite: false}),
+      78: Joke.build({ id: 78, favorite: true }),
+      206: Joke.build({ id: 206, favorite: false }),
     }
     const result = {
       favoriteJokes: {
-        78: Joke.build({id: 78, favorite: true}),
+        78: Joke.build({ id: 78, favorite: true }),
       },
     }
     const { removeJokeFromFavorites } = Jokes
@@ -151,5 +151,10 @@ describe('Jokes', () => {
     })
     component.instance().addNewFavoriteJokesEveryNSeconds()
     expect(component.state().isCounterInitialized).toEqual(false)
+  })
+  it('should hide login modal after submit', () => {
+    const component = shallow(<Jokes />)
+    component.instance().onSubmit()
+    expect(component.state().isLogged).toEqual(true)
   })
 })

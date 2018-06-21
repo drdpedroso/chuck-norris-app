@@ -8,7 +8,7 @@
     "react/jsx-filename-extension": ["never"],
     "import/prefer-default-export": [1, "always"],
     "react/no-unused-prop-types": [1, "always"],
-    "max-len": ["error", { "code": 135 }]
+    "max-len": ["error", { "code": 155 }]
   },
   "env": {
     "jest/globals": true,

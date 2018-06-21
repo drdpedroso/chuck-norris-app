@@ -1,7 +1,6 @@
 import {
   getIntersectionBetweenObjArrays,
   mapArrayToHashMap,
-  lookForStraightLetters,
   hasInvalidCharsOrNonLowercaseLetters,
   validatePassword,
 } from './utils'
@@ -45,12 +44,6 @@ describe('utils', () => {
       1: { id: 1, joke: 'Joke 1' },
       2: { id: 2, joke: 'Joke 2' },
     }))
-  })
-  it('should return true if string has 3 straight letters (alphabetic order)', () => {
-    expect(lookForStraightLetters('abcpassword')).toEqual(true)
-  })
-  it('should return false if string doesnt have 3 straight letters (alphabetic order)', () => {
-    expect(lookForStraightLetters('passwordac')).toEqual(false)
   })
   it('should return false if string dont contains any uppercase letter', () => {
     expect(hasInvalidCharsOrNonLowercaseLetters('passwordac')).toEqual(false)

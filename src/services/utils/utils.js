@@ -13,33 +13,6 @@ export const mapArrayToHashMap = (arr) => {
 
 export const getAlphabetPositionOfALetter = letter => 'abcdefghijklmnopqrstuvwxyz'.indexOf(letter) + 1
 
-export const lookForStraightLetters = (password = '') => {
-  const arr = password.split('')
-  const passwordArray = arr.map(c => getAlphabetPositionOfALetter(c))
-  for (let i = 0; i < passwordArray.length - 2; i++) {
-    for (let j = 1; j < 3; j++) {
-      if (passwordArray[i + j] !== (passwordArray[i + j - 1] + 1)) {
-        break
-      }
-      if (j === 2) return true
-    }
-  }
-  return false
-}
-
-export const getNonOverlappingPairs = (string = '') => {
-  const arr = string.split('')
-  let overlappingParis = 0
-  for(let i = 0; i < arr.length; i++) {
-    const narray = arr.slice(i, i + 2)
-    if (i % 2 === 0 && narray[0] !== narray[1]) {
-      overlappingParis += 1
-      i++
-    }
-  }
-  return overlappingParis
-}
-
 export const hasInvalidCharsOrNonLowercaseLetters = (str) => {
   const regex = new RegExp(/[iOl]|[^a-z]\w+/g)
   return regex.test(str)
@@ -49,7 +22,29 @@ export const validatePassword = (password = '') => {
   if (password.length > 32) {
     return false
   }
-  const hasStraightLetters = lookForStraightLetters(password)
-  const nonOverlappingPairs = getNonOverlappingPairs(password)
-  return hasStraightLetters && !hasInvalidCharsOrNonLowercaseLetters(password) && nonOverlappingPairs > 2
+  let straightLettersGroups = 0
+  let straightLetters = 1
+  let nonOverlappingPairs = 0
+
+  const arr = password.split('')
+  const passwordArray = arr.map(c => getAlphabetPositionOfALetter(c))
+  for (let i = 1; i < passwordArray.length; i += 1) {
+    // check for overlapping pairs
+    if ((i + 1) % 2 === 0 && passwordArray[i - 1] !== passwordArray[i]) {
+      nonOverlappingPairs += 1
+    }
+
+    // check for straight letters group of 3 letters
+    if (passwordArray[i - 1] + 1 === passwordArray[i]) {
+      straightLetters += 1
+    } else {
+      straightLetters = 1
+    }
+    if (straightLetters === 3) {
+      straightLetters = 1
+      straightLettersGroups += 1
+    }
+  }
+
+  return straightLettersGroups > 0 && !hasInvalidCharsOrNonLowercaseLetters(password) && nonOverlappingPairs > 2
 }

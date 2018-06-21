@@ -3,7 +3,6 @@ import { getNRandomJokes } from 'services/api/jokesApi'
 import { getItemsFromLocalStorage, setItemsInLocalStorage, getCookie } from 'services/storage/storage'
 import { mapArrayToHashMap } from 'services/utils/utils'
 import first from 'lodash/first'
-// import { getIntersectionBetweenObjArrays } from 'services/utils/utils'
 import JokesList from './jokes/JokesList'
 import { Button, Column, JokesWrapper } from './jokes/style'
 import LoginModal from '../components/LoginModal'
@@ -37,7 +36,7 @@ class Jokes extends React.Component {
       jokes: {},
       favoriteJokes: {},
       isCounterInitialized: false,
-      isLogged: getCookie('logged') || false
+      isLogged: getCookie('logged') || false,
     }
     this.intervalId = 0 // Necessary to store setInterval ID to clear interval when needed
     this.addJokeToFavorites = this.addJokeToFavorites.bind(this)
@@ -45,6 +44,16 @@ class Jokes extends React.Component {
     this.updateAllItems = this.updateAllItems.bind(this)
     this.addNewFavoriteJokesEveryNSeconds = this.addNewFavoriteJokesEveryNSeconds.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+  }
+
+  componentDidMount() {
+    this.updateAllItems()
+  }
+
+  onSubmit() {
+    this.setState({
+      isLogged: true,
+    })
   }
 
   addJokeToFavorites(joke) {
@@ -69,10 +78,6 @@ class Jokes extends React.Component {
     )
   }
 
-  componentDidMount() {
-    this.updateAllItems()
-  }
-
   async updateAllItems() {
     const { value } = await getNRandomJokes(10)
     const jokes = mapArrayToHashMap(value.map(joke => ({ ...joke, favorite: false })))
@@ -91,19 +96,16 @@ class Jokes extends React.Component {
       const randomJoke = first(value)
       this.addJokeToFavorites(randomJoke)
     }, 5000))
-    this.setState(currentState => ({ isCounterInitialized: !currentState.isCounterInitialized }), () => {
-      if (this.state.isCounterInitialized) {
-        if (Object.keys(this.state.favoriteJokes).length >= 10) this.stopIntervalJokes(this.intervalId)
-      } else {
-        this.stopIntervalJokes(this.intervalId)
-      }
-    })
-  }
-
-  onSubmit() {
-    this.setState({
-      isLogged: true
-    })
+    this.setState(
+      currentState => ({ isCounterInitialized: !currentState.isCounterInitialized }),
+      () => {
+        if (this.state.isCounterInitialized) {
+          if (Object.keys(this.state.favoriteJokes).length >= 10) this.stopIntervalJokes(this.intervalId)
+        } else {
+          this.stopIntervalJokes(this.intervalId)
+        }
+      },
+    )
   }
 
   render() {
@@ -111,11 +113,11 @@ class Jokes extends React.Component {
       jokes,
       favoriteJokes,
       isCounterInitialized,
-      isLogged
+      isLogged,
     } = this.state
     return (
       <JokesWrapper>
-        {!isLogged && <LoginModal onSubmit={this.onSubmit}/>}
+        {!isLogged && <LoginModal onSubmit={this.onSubmit} />}
         <Column>
           <Button onClick={this.updateAllItems}>Refresh</Button>
           <Button

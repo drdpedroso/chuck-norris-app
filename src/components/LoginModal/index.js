@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { validatePassword } from 'services/utils/utils'
 import { setCookie } from 'services/storage/storage'
 
@@ -17,6 +18,12 @@ const ModalWrapper = styled.div`
   background-color: white;
   border-style: solid;
   border-width: medium;
+`
+
+const Button = styled.button`
+`
+
+const Input = styled.input`
 `
 
 class LoginModal extends React.PureComponent {
@@ -47,16 +54,24 @@ class LoginModal extends React.PureComponent {
         <Title>Login</Title>
         <form>
           <div>
-            <input type="text" onChange={({ target }) => this.onChange(target, 'user')} placeholder="User" />
+            <Input type="text" onChange={({ target }) => this.onChange(target, 'user')} placeholder="User" />
           </div>
           <div>
-            <input type="password" onChange={({ target }) => this.onChange(target, 'password')} placeholder="Password" />
+            <Input type="password" onChange={({ target }) => this.onChange(target, 'password')} placeholder="Password" />
           </div>
-          <button onClick={this.onSubmit}>SUBMIT</button>
+          <Button onClick={this.onSubmit}>SUBMIT</Button>
         </form>
       </ModalWrapper>
     )
   }
+}
+
+LoginModal.propTypes = {
+  onSubmit: PropTypes.func,
+}
+
+LoginModal.defaultProps = {
+  onSubmit: () => {},
 }
 
 export default LoginModal
